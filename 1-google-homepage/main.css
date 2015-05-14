@@ -107,10 +107,10 @@ input{
 ul.f_nav{
 	list-style: none;
 	font-family: arial;
-	font-size: 14px;
+	font-size: 13.5px;
 }
 
 ul.f_nav li{
 	float: left;
-	margin-right: 20px;
+	margin-right: 22px;
 }
