@@ -1,25 +1,26 @@
 * {
 	margin: 0px;
 	font-family: Garamond;
+	background-color: #ffe9b3;
 }
 
 .header {
 	/*border: 1px solid black;*/
 	width: 100%;
-	color: #ff9900;
+	color: #ff860c;
 	text-align: center;
 }
 
 .options {
 	/*border: 1px solid green;*/
 	width: 500px;
-	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 }
 
 .intro_para{
 	/*border: 1px solid gray;*/
+	color: #ff860c;
+	font-weight: 600;
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -28,20 +29,18 @@
 .buttons {
 	/*border: 1px solid purple;*/
 	width: 400px;
-	height: 50px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
+	margin-bottom: 30px;
 }
 
 .button_norm,
 .button_rand,
 .button_trail,
 .button_reset {
-	/*border: 1px solid green;*/
+	border: 1px solid #c19c64;
 	width: 95px;
 	height: 25px;
 	border-radius: 5px;
-	background-color: #ff9900;
 	display: inline-block;
 	margin: 0px;
 	cursor: pointer;
@@ -51,7 +50,27 @@
 	/*border: 1px solid red;*/
 	text-align: center;
 	font-weight: 900;
+	color: #fbb52f;
 	position: relative;
   	top: 50%;
  	transform: translateY(-50%);
+}
+
+.grid {
+	border: 1px solid #c19c64;
+	width: 700px;
+	height: 700px;
+	margin: auto;
+	padding: 0px;
+}
+
+.grid_block {
+	/*border: 1px solid #eacb81;*/
+	display: block;
+	float: left;
+	background-color: #c19c64;
+	width: 10px;
+	height: 10px;
+	margin: 0px;
+	padding: 0px;
 }
