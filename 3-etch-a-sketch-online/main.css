@@ -1,0 +1,57 @@
+* {
+	margin: 0px;
+	font-family: Garamond;
+}
+
+.header {
+	/*border: 1px solid black;*/
+	width: 100%;
+	color: #ff9900;
+	text-align: center;
+}
+
+.options {
+	/*border: 1px solid green;*/
+	width: 500px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.intro_para{
+	/*border: 1px solid gray;*/
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.buttons {
+	/*border: 1px solid purple;*/
+	width: 400px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button_norm,
+.button_rand,
+.button_trail,
+.button_reset {
+	/*border: 1px solid green;*/
+	width: 95px;
+	height: 25px;
+	border-radius: 5px;
+	background-color: #ff9900;
+	display: inline-block;
+	margin: 0px;
+	cursor: pointer;
+}
+
+.b_text {
+	/*border: 1px solid red;*/
+	text-align: center;
+	font-weight: 900;
+	position: relative;
+  	top: 50%;
+ 	transform: translateY(-50%);
+}
