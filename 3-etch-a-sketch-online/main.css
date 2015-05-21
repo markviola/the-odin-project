@@ -1,13 +1,13 @@
 * {
 	margin: 0px;
-	font-family: Garamond;
-	background-color: #ffe9b3;
+	font-family: Arial, Garamond;
+	background-color: #000044;
 }
 
 .header {
 	/*border: 1px solid black;*/
 	width: 100%;
-	color: #ff860c;
+	color: #ffffff;
 	text-align: center;
 }
 
@@ -19,8 +19,8 @@
 
 .intro_para{
 	/*border: 1px solid gray;*/
-	color: #ff860c;
-	font-weight: 600;
+	color: #ffffff;
+	font-weight: 400;
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -28,7 +28,7 @@
 
 .buttons {
 	/*border: 1px solid purple;*/
-	width: 400px;
+	width: 410px;
 	margin: auto;
 	margin-bottom: 30px;
 }
@@ -37,7 +37,8 @@
 .button_rand,
 .button_trail,
 .button_reset {
-	border: 1px solid #c19c64;
+	border: 2px solid #ffffff;
+	background-color: #6699cc;
 	width: 95px;
 	height: 25px;
 	border-radius: 5px;
@@ -49,15 +50,20 @@
 .b_text {
 	/*border: 1px solid red;*/
 	text-align: center;
-	font-weight: 900;
-	color: #fbb52f;
+	font-weight: 400;
+	font-size: 14px;
+	color: #ffffff;
+	background-color: #6699cc;
 	position: relative;
   	top: 50%;
  	transform: translateY(-50%);
 }
 
 .grid {
-	border: 1px solid #c19c64;
+	border: 40px solid red;
+	display: block;
+	border-radius: 15px;
+	background-color: black;
 	width: 700px;
 	height: 700px;
 	margin: auto;
@@ -68,9 +74,19 @@
 	/*border: 1px solid #eacb81;*/
 	display: block;
 	float: left;
-	background-color: #c19c64;
+	background-color: #ffffff;
 	width: 10px;
 	height: 10px;
 	margin: 0px;
 	padding: 0px;
+}
+
+.footer {
+	text-align: center;
+	color: white;
+	margin-top: 5px;
+}
+
+a {
+	color: white;
 }
