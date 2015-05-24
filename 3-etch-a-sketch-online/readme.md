@@ -9,4 +9,4 @@ Buttons:
 * **Reset:** Reset the drawing space to its original state
 
 #####Link
-[Etch-a-Sketch Online](https://cdn.rawgit.com/markviola/the-odin-project/master/3-etch-a-sketch-online/index.html)
+[Etch-a-Sketch Online](https://rawgit.com/markviola/the-odin-project/master/3-etch-a-sketch-online/index.html)
