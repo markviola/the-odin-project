@@ -5,6 +5,10 @@
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
+
+<% if @article.image.exists? %>
+    <%= image_tag @article.image.url %><br/>
+<% end %>
 <p><%= @article.body %></p>
 <br>
 <h3>Comments (<%= @article.comments.size %>)</h3>
