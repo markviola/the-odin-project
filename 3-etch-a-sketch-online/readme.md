@@ -8,7 +8,7 @@ Buttons:
 * **Trail:** The color will change to black then gradually change back to the white background
 * **Reset:** Reset the drawing space to its original state
 
-![Etch-a-Sketch](images/site.PNG)
+![Etch-a-Sketch](images/homepage.PNG)
 
 #####Link
 [Etch-a-Sketch Online](https://rawgit.com/markviola/the-odin-project/master/3-etch-a-sketch-online/index.html)
