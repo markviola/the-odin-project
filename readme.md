@@ -31,4 +31,4 @@ Slightly more involved Ruby problems from those in Exercise #4 - Ruby Problems. 
 
 ######More Ruby Problems 2
 
-Ruby problems that focus on implementing blocks to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the bubble sort algorithm is to be recreated as well as a variety of Ruby functions such as `#my_each`, `#my_each_with_index`, `#my_select`, `#my_all?`, `#my_any?`, `#my_none?`, `#my_count`, `#my_map`, and `#my_inject`.
+Ruby problems that focus on implementing blocks to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the bubble sort algorithm is to be recreated as well as a variety of Ruby functions such as `#each`, `#each_with_index`, `#select`, `#all?`, `#any?`, `#none?`, `#count`, `#map`, and `#inject`.

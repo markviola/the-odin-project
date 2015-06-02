@@ -1,6 +1,6 @@
 #More Ruby Problems 2
 
-Ruby problems that focus on implementing blocks to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the bubble sort algorithm is to be recreated as well as a variety of Ruby functions such as `#my_each`, `#my_each_with_index`, `#my_select`, `#my_all?`, `#my_any?`, `#my_none?`, `#my_count`, `#my_map`, and `#my_inject`.
+Ruby problems that focus on implementing blocks to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the bubble sort algorithm is to be recreated as well as a variety of Ruby functions such as `#each`, `#each_with_index`, `#select`, `#all?`, `#any?`, `#none?`, `#count`, `#map`, and `#inject`.
 
 ####1 - Bubble Sort
 Implement `#bubble_sort` and `#bubble_sort_by` methods
@@ -27,7 +27,7 @@ ruby bubble_sort.rb
 
 
 ####2 - Enumerable Methods
-Rebuild a variety of methods native to Ruby including, `#my_each`, `#my_each_with_index`, `#my_select`, `#my_all?`, `#my_any?`, `#my_none?`, `#my_count`, `#my_map`, and `#my_inject`.
+Rebuild a variety of methods native to Ruby including with the new names, `#my_each`, `#my_each_with_index`, `#my_select`, `#my_all?`, `#my_any?`, `#my_none?`, `#my_count`, `#my_map`, and `#my_inject`.
 
 * `#my_each`: Calls the given block once for each element in self, passing that element as a parameter.
 * `#my_each_with_index`: Calls block with two arguments, the item and its index, for each item in enum. 
