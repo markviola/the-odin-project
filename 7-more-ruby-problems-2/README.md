@@ -10,7 +10,7 @@ Implement `#bubble_sort` and `#bubble_sort_by` methods
 
 ######To run:
 ```
-cd 7-more-ruby-problems/1 - Bubble Sort
+cd 7-more-ruby-problems-2/1 - Bubble Sort
 ```
 ```
 ruby bubble_sort.rb
@@ -41,7 +41,7 @@ Rebuild a variety of methods native to Ruby including with the new names, `#my_e
 
 ######To run:
 ```
-cd 7-more-ruby-problems/2 - Enumerable Methods
+cd 7-more-ruby-problems-2/2 - Enumerable Methods
 ```
 ```
 ruby enumerable_methods.rb

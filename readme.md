@@ -29,6 +29,6 @@ This project is to get used to creating a Ruby on Rails application. This partic
 
 Slightly more involved Ruby problems from those in Exercise #4 - Ruby Problems. These practice problems are for a quick review of Ruby syntax and geeting used to some of the more intricate object methods in Ruby.
 
-######More Ruby Problems 2
+######7 - More Ruby Problems 2
 
 Ruby problems that focus on implementing blocks to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the bubble sort algorithm is to be recreated as well as a variety of Ruby functions such as `#each`, `#each_with_index`, `#select`, `#all?`, `#any?`, `#none?`, `#count`, `#map`, and `#inject`.
