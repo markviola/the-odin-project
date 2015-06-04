@@ -2,7 +2,7 @@ class TicTacToe
 	def initialize
 		@gameover = false
 		@board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
-		@turn_count = 1
+		@turn_count = 0
 		game_loop
 	end
 
@@ -71,11 +71,14 @@ class TicTacToe
 	end
 
 	def is_valid(x_coord, y_coord)
-		if @board[y_coord][x_coord] == ' '
-			return true
-		else 
-			return false
+		if (x_coord >= 0 && x_coord <=2) && (y_coord >= 0 && y_coord <=2)
+			if @board[y_coord][x_coord] == ' '
+				return true
+			else 
+				return false
+			end
 		end
+		return false
 	end
 
 	def check_gameover
@@ -118,4 +121,3 @@ class Player
 end
 
 game = TicTacToe.new
-game.draw_board
