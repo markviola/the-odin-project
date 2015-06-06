@@ -15,6 +15,41 @@ ruby tic_tac_toe.rb
 ```
 
 ######Outcome:
+Sample input for beginning of the game
+
+```
+Enter the name for Player 1: <strong>Mark</strong>
+```
+```
+Enter a symbol to use: <strong>O</strong>
+```
+```
+Enter the name for Player 2: <strong>Viola</strong>
+```
+```
+Enter a symbol to use: <strong>X</strong>
+```
+```
+-------
+| | | |
+-------
+| | | |
+-------
+| | | |
+-------
+Mark, enter a location: <strong>1,1</strong>
+```
+```
+-------
+| | | |
+-------
+| |O| |
+-------
+| | | |
+-------
+Viola, enter a location: 
+```
+
 
 
 ####2 - Mastermind
