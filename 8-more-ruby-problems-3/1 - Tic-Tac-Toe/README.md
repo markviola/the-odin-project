@@ -13,16 +13,16 @@ ruby tic_tac_toe.rb
 Sample input for beginning of the game
 
 ```
-Enter the name for Player 1: <strong>Mark</strong>
+Enter the name for Player 1: **Mark**
 ```
 ```
-Enter a symbol to use: <strong>O</strong>
+Enter a symbol to use: **O**
 ```
 ```
-Enter the name for Player 2: <strong>Viola</strong>
+Enter the name for Player 2: **Viola**
 ```
 ```
-Enter a symbol to use: <strong>X</strong>
+Enter a symbol to use: **X**
 ```
 ```
 -------
@@ -32,7 +32,7 @@ Enter a symbol to use: <strong>X</strong>
 -------
 | | | |
 -------
-Mark, enter a location: <strong>1,1</strong>
+Mark, enter a location: **1,1**
 ```
 ```
 -------
