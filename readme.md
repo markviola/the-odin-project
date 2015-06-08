@@ -32,3 +32,7 @@ Slightly more involved Ruby problems from those in Exercise #4 - Ruby Problems. 
 ######7 - More Ruby Problems 2
 
 Ruby problems that focus on implementing blocks to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the bubble sort algorithm is to be recreated as well as a variety of Ruby functions such as `#each`, `#each_with_index`, `#select`, `#all?`, `#any?`, `#none?`, `#count`, `#map`, and `#inject`.
+
+######8 - More Ruby Problems 3
+
+Ruby problems that focus on implementing object oriented programming to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the task is to create a program that replicates the classic games, [Tic-Tac-Toe](http://en.wikipedia.org/wiki/Tic-tac-toe) and [Mastermind](http://en.wikipedia.org/wiki/Mastermind_(board_game)) using Ruby.
