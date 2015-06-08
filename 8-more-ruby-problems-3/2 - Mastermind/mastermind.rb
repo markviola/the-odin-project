@@ -7,7 +7,8 @@ class Mastermind
 		@colors = ['O', 'G', 'R', 'B', 'P', 'Y']
 		@answer_num = {'O'=>0, 'G'=>0, 'R'=>0, 'B'=>0, 'P'=>0, 'Y'=>0}
 		@guess_num = {'O'=>0, 'G'=>0, 'R'=>0, 'B'=>0, 'P'=>0, 'Y'=>0}
-		@clue = {'black'=>0, 'white'=>0, 'none'=>0}
+		#black = correct color + position, white = correct color
+		@clue = {'black'=>0, 'white'=>0, 'none'=>0} 
 		setup
 		game_loop
 	end
@@ -15,6 +16,7 @@ class Mastermind
 	def setup
 		print "Enter your name: "
 		@name = gets.chomp
+		#Setting up answer key
 		for i in 0...4
 			color = @colors[rand(6)]
 			@answer << color
@@ -28,7 +30,7 @@ class Mastermind
 			check_guess
 			print_results
 			@turn_num += 1
-			@gameover = true if @turn_num > 14
+			@gameover = true if @turn_num > 14 #Maximum number of turns is 14
 		end
 		if @turn_num > 14
 			puts "Sorry, #{@name}, you lost!"
@@ -56,6 +58,7 @@ class Mastermind
 			for i in 0...4
 				@guess_num[@guess[i]] += 1
 			end
+			#All elements of @guess are valid
 			return true
 		else
 			return false
@@ -64,16 +67,18 @@ class Mastermind
 
 	def check_guess
 		#Assuming @guess variable has 4 elements because of valid_guess
+
 		if @guess_num == @answers_num
 			@clue['black'] = 4
 			@gameover = true
-		else 
+		else
 			@clue['black'] = 0
 			for i in 0...4
 				if @answer[i] == @guess[i]
 					@clue['black'] += 1
 				end
 			end
+			#Find the total number of correct colors found
 			correct_colors = 0
 			@answer_num.each do |color, num|
 				if @guess_num[color] > num
@@ -82,6 +87,7 @@ class Mastermind
 					correct_colors += @guess_num[color]
 				end
 			end
+			#Correct colors guessed = correct positions + incorrect positions
 			@clue['white'] = correct_colors - @clue['black']
 		end	
 	end
