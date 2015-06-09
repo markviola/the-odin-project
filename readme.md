@@ -36,3 +36,7 @@ Ruby problems that focus on implementing blocks to solve. The objective is to ge
 ######8 - More Ruby Problems 3
 
 Ruby problems that focus on implementing object oriented programming to solve. The objective is to get better practice in using Ruby to solve programming problems. Specifically, the task is to create a program that replicates the classic games, [Tic-Tac-Toe](http://en.wikipedia.org/wiki/Tic-tac-toe) and [Mastermind](http://en.wikipedia.org/wiki/Mastermind_(board_game)) using Ruby.
+
+######9 - Serialization and Working with Files
+
+Two exercises that explain how to use files for reading and writing. Specifically for the Event Manager exercise, the task was to read the CSV file and use it to generate an email (using ERB) through an email template. The Hangman exercise focuses on reading a dictionary file and generating a game of [Hangman](http://en.wikipedia.org/wiki/Hangman_%28game%29) that means the word criteria. 
