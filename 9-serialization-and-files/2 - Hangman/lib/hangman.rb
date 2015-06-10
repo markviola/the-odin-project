@@ -1,3 +1,5 @@
+require 'yaml'
+
 class Hangman
 	def initialize(dictionary)
 		@gameover = false
@@ -7,18 +9,25 @@ class Hangman
 		@current_word = ""
 		@word = get_word
 		@view = get_view("hangman_display.txt")
-
-		game_loop
 	end
 
 	def game_loop
 		while !@gameover
 			print_status
-			get_input
-			determine_outcome
+			guess = get_input
+			guess.upcase == "SOLVE" ? solve_attempt : determine_outcome
 			@gameover = is_gameover
+			save_game
 		end
-		puts "THE END BRUH"
+		if @wrong_guesses >=6
+			puts "\n\n======================================="
+			puts "============== You lose! =============="
+			puts "======================================="
+		else
+			puts "\n\n======================================="
+			puts "====== Congratulations, you win! ======"
+			puts "======================================="
+		end
 	end
 
 	def get_word
@@ -62,24 +71,24 @@ class Hangman
 
 	def print_status
 		puts "\nThe current word is: #{@current_word}\n"
-		puts "\nThe current word is: #{@word}\n"
 		puts @view[@wrong_guesses]
 		puts "\nLetters you have guessed: #{@letters_guessed.join(", ")}"
 		puts "You have #{6-@wrong_guesses} lives left"
 	end
 
 	def get_input
+		guess = ""
 		loop do
 			print "Guess a letter or type 'solve' to solve: "
 			guess = gets.chomp
 			valid_guess = is_valid(guess)
 			break if valid_guess
 		end
+		return guess
 	end
 
 	def is_valid(guess)
 		if guess.upcase == "SOLVE"
-			solve_attempt
 			return true
 		elsif @letters_guessed.include?(guess.upcase)
 			return false
@@ -101,7 +110,7 @@ class Hangman
 				end
 			end
 		else
-			@wrong_guesses += 1
+			@wrong_guesses += 1 
 		end
 	end
 
@@ -120,9 +129,45 @@ class Hangman
 
 	def solve_attempt
 		print "Enter the solution to the word: "
-		attempt = gets.chomp
-		
+		attempt = gets.chomp.upcase
+		if attempt == @word[0..@word.length-2]
+			@gameover = true
+			@current_word = @word
+			puts "You guessed the word correctly!"
+		else
+			@wrong_guesses += 1
+			puts "Sorry, that's incorrect!"
+		end
 	end
 end
 
-game = Hangman.new("dictionary.txt")
+
+def load_game
+	if File.exists?("saves/save_file.yaml")
+		content = File.open("saves/save_file.yaml", "r") { |file| file.read }
+		YAML.load(content) 
+	else
+		puts "ERROR! There is no save file!"
+	end
+end
+
+def save_game
+	Dir.mkdir("saves") unless Dir.exist? "saves"
+	filename = "saves/save_file.yaml"
+	File.open(filename, "w") do |file|
+		file.puts YAML.dump(self)
+	end
+end
+
+
+#Initial setup
+to_load = ""
+loop do
+	print "Do you want to load the game (Y/N): "
+	to_load = gets.chomp
+	break if to_load.upcase == "Y" || to_load.upcase == "N"
+	puts "Incorrect input!"
+end
+
+game = to_load.upcase == "Y" ? load_game : Hangman.new("dictionary.txt")
+game.game_loop if File.exists?("saves/save_file.yaml") || to_load.upcase == "N"
