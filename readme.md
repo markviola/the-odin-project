@@ -40,3 +40,7 @@ Ruby problems that focus on implementing object oriented programming to solve. T
 ######9 - Serialization and Working with Files
 
 Two exercises that explain how to use files for reading and writing. Specifically for the Event Manager exercise, the task was to read the CSV file and use it to generate an email (using ERB) through an email template. The Hangman exercise focuses on reading a dictionary file and generating a game of [Hangman](http://en.wikipedia.org/wiki/Hangman_%28game%29) that means the word criteria. 
+
+######10 - Ruby on the Web
+
+The two exercises focus on interaction with servers. Specifically, the Twitter Spambot exercise focuses on the use of Twitter API to interact with Twitter servers, whereas the Web Server and Browser exercise focuses on the basics of creating a server and how to interact with that server using HTTP requests.
