@@ -44,3 +44,7 @@ Two exercises that explain how to use files for reading and writing. Specificall
 ######10 - Ruby on the Web
 
 The two exercises focus on interaction with servers. Specifically, the Twitter Spambot exercise focuses on the use of Twitter API to interact with Twitter servers, whereas the Web Server and Browser exercise focuses on the basics of creating a server and how to interact with that server using HTTP requests.
+
+######11 - More Ruby Problems 4
+
+Two more general general programming problems, using Ruby, that focuses on using recursion to solve problems. The two problems to be recreated are the Fibonacci Sequence and Merge Sort. 
