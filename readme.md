@@ -48,3 +48,7 @@ The two exercises focus on interaction with servers. Specifically, the Twitter S
 ######11 - More Ruby Problems 4
 
 Two more general general programming problems, using Ruby, that focuses on using recursion to solve problems. The two problems to be recreated are the Fibonacci Sequence and Merge Sort. 
+
+######12 - Data Structures and Algorithms
+
+Two programming problems that focus on the use of data structures (Binary Search Tree) and algorithms (breadth first search and depth first search algorithms) to solve problems. The first problem is to implement the binary tree data structure whereas the second exercise involves using algorithms to solve a practical problem. 
