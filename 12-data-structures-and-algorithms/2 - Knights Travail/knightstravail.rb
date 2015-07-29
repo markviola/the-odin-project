@@ -1,7 +1,10 @@
+require 'thread'
+
 class KnightNode
-	def initialize(coord)
+	def initialize(parent, coord)
 		@coord = coord
 		@children = []
+		@parent = parent
 		find_children
 	end
 
@@ -20,41 +23,39 @@ class KnightNode
 	def get_coord
 		return @coord
 	end
+
+	def get_parent 
+		return @parent
+	end
 end
 
-
+#Uses breadth first search to find shortest path
 def knight_moves(start_coord, end_coord)
-	found_path = []
-	i = 0
-	path = [start_coord]
-	found = false
-	current_node = KnightNode.new(start_coord)
+	queue = Queue.new
+	node = KnightNode.new(nil, start_coord)
+	queue << node
+	path = []
 
-	if(start_coord == end_coord)
-		return path, true
-	else 
-		while (i < current_node.get_children.length) && (!found)
-			if current_node.get_children[i] == end_coord
-				puts "in here"
-				path += [current_node.get_children[i]]
-				found = true
-				return path, found
+	until queue.empty? do 
+		current_node = queue.pop
+
+		if current_node.get_coord == end_coord
+			loop do
+				path += [current_node.get_coord]
+				break if current_node.get_parent == nil
+				current_node = current_node.get_parent
 			end
-			i += 1
+
+			return path 
 		end
 
 		for i in 0...current_node.get_children.length
-			found_path, found = knight_moves(current_node.get_children[i], end_coord)
-			if found 
-				path += found_path
-				return found_path, found
-			end
+			queue << KnightNode.new(current_node, current_node.get_children[i])
 		end
 	end
-	
-	return path, found
-end
 
+	return nil
+end
 
 def is_knight_move(start_coord, new_x, new_y)
 	if ((new_x - start_coord[0]).abs == 1) && ((new_y - start_coord[1]).abs == 2)
@@ -66,11 +67,20 @@ def is_knight_move(start_coord, new_x, new_y)
 	end
 end
 
-
 def valid_coord(end_coord)
 	return true if (end_coord[0] >= 0) && (end_coord[0] < 8) && 
 						(end_coord[1] >= 0) && (end_coord[1] < 8)
 	return false
 end
 
-print knight_moves([0,0], [4,2])
+def print_path(path_stack)
+	puts "\nYou made it in " + (path_stack.length-1).to_s + " moves! Here's your path:"
+
+	until path_stack.empty?
+		print path_stack.pop 
+		puts ""
+	end
+end
+
+path_stack = knight_moves([3,3], [4,3])
+print_path(path_stack)
